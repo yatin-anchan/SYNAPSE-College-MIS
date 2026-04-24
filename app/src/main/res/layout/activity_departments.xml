@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_gradient_background"
+    android:fitsSystemWindows="true">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/toolbar_gradient"
+            app:title="Departments"
+            app:titleTextColor="@android:color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Search Bar -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#331A1A3E">
+
+                <EditText
+                    android:id="@+id/search_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Search departments..."
+                    android:textColorHint="@color/splash_text_secondary"
+                    android:textColor="@android:color/white"
+                    android:padding="16dp"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawablePadding="12dp"
+                    android:drawableTint="@color/splash_accent"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Collapsible Filters Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#331A1A3E">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_glass_effect">
+
+                    <!-- Filter Header (Always Visible) -->
+                    <LinearLayout
+                        android:id="@+id/filter_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_filter"
+                            app:tint="@color/splash_accent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Filters"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="12dp" />
+
+                        <ImageView
+                            android:id="@+id/filter_expand_icon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_expand_more"
+                            app:tint="@color/splash_accent" />
+                    </LinearLayout>
+
+                    <!-- Collapsible Filter Content -->
+                    <LinearLayout
+                        android:id="@+id/filter_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="16dp"
+                        android:paddingBottom="16dp"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#22FFFFFF"
+                            android:layout_marginBottom="16dp" />
+
+                        <!-- College Filter -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="College Level"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp"
+                            android:drawableStart="@drawable/ic_school"
+                            android:drawablePadding="8dp"
+                            android:drawableTint="@color/splash_accent" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chip_group_college"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            app:singleSelection="true"
+                            app:chipSpacingHorizontal="8dp">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_jr_college"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Junior College"
+                                android:checked="true"
+                                app:chipBackgroundColor="@color/chip_background_color"
+                                app:chipStrokeColor="@color/splash_accent"
+                                app:chipStrokeWidth="2dp"
+                                android:textColor="@android:color/white" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_sr_college"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Senior College"
+                                app:chipBackgroundColor="@color/chip_background_color"
+                                app:chipStrokeColor="@color/splash_accent"
+                                app:chipStrokeWidth="2dp"
+                                android:textColor="@android:color/white" />
+                        </com.google.android.material.chip.ChipGroup>
+
+                        <!-- Stream Filter -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Stream"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp"
+                            android:drawableStart="@drawable/ic_category"
+                            android:drawablePadding="8dp"
+                            android:drawableTint="@color/splash_accent" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chip_group_stream"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true"
+                            app:chipSpacingHorizontal="8dp">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_all_streams"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="All"
+                                android:checked="true"
+                                app:chipBackgroundColor="@color/chip_background_color"
+                                app:chipStrokeColor="@color/splash_accent"
+                                app:chipStrokeWidth="2dp"
+                                android:textColor="@android:color/white" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_science"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Science"
+                                app:chipBackgroundColor="@color/chip_background_color"
+                                app:chipStrokeColor="@color/splash_accent"
+                                app:chipStrokeWidth="2dp"
+                                android:textColor="@android:color/white" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_commerce"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Commerce"
+                                app:chipBackgroundColor="@color/chip_background_color"
+                                app:chipStrokeColor="@color/splash_accent"
+                                app:chipStrokeWidth="2dp"
+                                android:textColor="@android:color/white" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_arts"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Arts"
+                                app:chipBackgroundColor="@color/chip_background_color"
+                                app:chipStrokeColor="@color/splash_accent"
+                                app:chipStrokeWidth="2dp"
+                                android:textColor="@android:color/white" />
+                        </com.google.android.material.chip.ChipGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Department Count -->
+            <TextView
+                android:id="@+id/department_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 Departments"
+                android:textColor="@color/splash_text_secondary"
+                android:textSize="13sp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/department_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="80dp"
+                android:clipToPadding="false" />
+
+            <!-- Empty State -->
+            <LinearLayout
+                android:id="@+id/empty_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="32dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_departments"
+                    app:tint="@color/splash_text_secondary"
+                    android:alpha="0.5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Departments Found"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add your first department to get started"
+                    android:textColor="@color/splash_text_secondary"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_department"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_add"
+        app:tint="@android:color/white"
+        app:backgroundTint="@color/splash_accent"
+        android:contentDescription="Add Department" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

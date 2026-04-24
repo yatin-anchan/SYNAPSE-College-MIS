@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#331A1A3E">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_glass_effect"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="12dp">
+
+        <!-- ── ROW 1: Roll No pill │ Student Name │ Absent checkbox ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Roll No pill -->
+            <TextView
+                android:id="@+id/rollno"
+                android:layout_width="52dp"
+                android:layout_height="28dp"
+                android:gravity="center"
+                android:text="001"
+                android:textColor="@color/splash_accent"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="@drawable/badge_pending"
+                android:paddingHorizontal="6dp" />
+
+            <!-- Student Name -->
+            <TextView
+                android:id="@+id/studentname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="Student Name"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <!-- Absent checkbox + label -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <CheckBox
+                    android:id="@+id/absentcheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@android:color/holo_red_light" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Absent"
+                    android:textColor="#99FFFFFF"
+                    android:textSize="9sp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ── Divider ── -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="#22FFFFFF" />
+
+        <!-- ── ROW 2: Written marks input ── -->
+        <LinearLayout
+            android:id="@+id/written_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:text="Written"
+                android:textColor="#88FFFFFF"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/writteninput"
+                android:layout_width="80dp"
+                android:layout_height="44dp"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:background="@drawable/edittext_rounded"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:maxLength="5"
+                android:hint="--"
+                android:textColorHint="#44FFFFFF" />
+
+            <TextView
+                android:id="@+id/maxmarkstext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="/ 100"
+                android:textColor="#66FFFFFF"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- ── ROW 3: Internal marks input ── -->
+        <LinearLayout
+            android:id="@+id/internal_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:text="Internal"
+                android:textColor="#88FFFFFF"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/internalinput"
+                android:layout_width="80dp"
+                android:layout_height="44dp"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:background="@drawable/edittext_rounded"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:maxLength="5"
+                android:hint="--"
+                android:textColorHint="#44FFFFFF" />
+
+        </LinearLayout>
+
+        <!-- ── Divider ── -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="8dp"
+            android:background="#22FFFFFF" />
+
+        <!-- ── ROW 4: Percentage │ Grade ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Score:"
+                android:textColor="#88FFFFFF"
+                android:textSize="11sp" />
+
+            <!-- Percentage -->
+            <TextView
+                android:id="@+id/percentagetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="--"
+                android:textColor="#E0FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <!-- Grade badge -->
+            <TextView
+                android:id="@+id/gradetext"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/badge_accepted"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text="--"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

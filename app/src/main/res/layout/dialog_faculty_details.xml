@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/splash_gradient_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Profile Section -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_person"
+                app:civ_border_width="3dp"
+                app:civ_border_color="@color/splash_accent" />
+
+            <ImageView
+                android:id="@+id/profile_status_badge"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/ic_check_circle"
+                android:background="@drawable/badge_bg"
+                android:padding="4dp"
+                app:tint="@color/splash_accent" />
+        </FrameLayout>
+
+        <!-- Name and Role -->
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faculty Name"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/role_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Head of Department"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            app:chipBackgroundColor="@android:color/holo_green_dark"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/employee_id_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FAC123456"
+            android:textColor="@color/splash_text_secondary"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#22FFFFFF"
+            android:layout_marginVertical="16dp" />
+
+        <!-- Contact Info -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Information"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/email_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="email@example.com"
+            android:textColor="@color/splash_text_color"
+            android:textSize="13sp"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/splash_accent"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/phone_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+91 1234567890"
+            android:textColor="@color/splash_text_color"
+            android:textSize="13sp"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/splash_accent"
+            android:layout_marginBottom="8dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#22FFFFFF"
+            android:layout_marginVertical="16dp" />
+
+        <!-- Department Info -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Department Information"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Department:"
+                android:textColor="@color/splash_text_secondary"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/department_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Computer Science"
+                android:textColor="@color/splash_text_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="College:"
+                android:textColor="@color/splash_text_secondary"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/college_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Senior College"
+                android:textColor="@color/splash_text_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Stream:"
+                android:textColor="@color/splash_text_secondary"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/stream_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Science"
+                android:textColor="@color/splash_text_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Designation:"
+                android:textColor="@color/splash_text_secondary"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/designation_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Professor"
+                android:textColor="@color/splash_text_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#22FFFFFF"
+            android:layout_marginVertical="16dp" />
+
+        <!-- Qualifications -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qualifications"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/qualifications_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Not Specified"
+            android:textColor="@color/splash_text_color"
+            android:textSize="12sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Experience -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Experience"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/experience_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Not Specified"
+            android:textColor="@color/splash_text_color"
+            android:textSize="12sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Subjects -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subjects Teaching"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/subjects_chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:singleLine="false" />
+
+        <TextView
+            android:id="@+id/no_subjects_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No subjects assigned"
+            android:textColor="@color/splash_text_secondary"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:visibility="visible" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_call"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Call"
+                android:layout_marginEnd="8dp"
+                app:icon="@drawable/ic_phone"
+                app:backgroundTint="@color/splash_accent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Email"
+                app:icon="@drawable/ic_email"
+                app:backgroundTint="@color/splash_accent" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <!-- Timetables -->
+    <external-files-path
+        name="timetables"
+        path="Documents/Timetables/" />
+
+    <!-- Results -->
+    <external-files-path
+        name="results"
+        path="Documents/Results/" />
+
+    <!-- Cache -->
+    <cache-path
+        name="cache"
+        path="." />
+
+    <cache-path
+        name="gazettes"
+        path="gazettes/" />
+
+    <external-path
+        name="external_downloads"
+        path="Download/" />
+
+</paths>

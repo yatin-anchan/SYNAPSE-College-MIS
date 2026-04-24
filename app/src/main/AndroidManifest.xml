@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.projectbyyatin.synapsemis">
+
+    <!-- Permissions -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_synapse_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_synapse_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SynapseMIS"
+        android:enableOnBackInvokedCallback="true">
+
+        <!-- Google Play Services -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- FileProvider for PDF sharing -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- ================= LAUNCHER & CORE ACTIVITIES ================= -->
+
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.SynapseMIS"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/Theme.SynapseMIS"
+            android:exported="false" />
+
+        <activity
+            android:name=".SetupAccountActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SynapseMIS" />
+
+        <!-- ================= COE DASHBOARD & ACTIVITIES ================= -->
+
+        <activity
+            android:name=".CoeDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:launchMode="singleTop" />
+
+        <!-- COE Faculty Management -->
+        <activity
+            android:name=".FacultyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Faculty Management"
+            android:parentActivityName=".CoeDashboardActivity" />
+
+        <activity
+            android:name=".AddFacultyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Add Faculty"
+            android:parentActivityName=".FacultyActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".EditFacultyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Edit Faculty"
+            android:parentActivityName=".FacultyActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ViewFacultyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Faculty Details"
+            android:parentActivityName=".FacultyActivity" />
+
+        <activity
+            android:name=".FacultyAdditionalDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Faculty Additional Details"
+            android:parentActivityName=".ViewFacultyActivity" />
+
+        <!-- COE Department Management -->
+        <activity
+            android:name=".DepartmentsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Departments"
+            android:parentActivityName=".CoeDashboardActivity" />
+
+        <activity
+            android:name=".AddDepartmentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Add Department"
+            android:parentActivityName=".DepartmentsActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ManageDepartmentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Manage Department"
+            android:parentActivityName=".DepartmentsActivity" />
+
+        <activity
+            android:name=".DepartmentFacultyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Department Faculty"
+            android:parentActivityName=".ManageDepartmentActivity" />
+
+        <activity
+            android:name=".ChangeHODActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Change HOD"
+            android:parentActivityName=".ManageDepartmentActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".AddFacultyToDepartmentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Add Faculty to Department"
+            android:parentActivityName=".ManageDepartmentActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".AddStudentsToDepartmentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Add Students to Department"
+            android:parentActivityName=".ManageDepartmentActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ManageDeptStudentsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Manage Department Students"
+            android:parentActivityName=".ManageDepartmentActivity" />
+
+        <!-- COE Course/Class/Semester Management -->
+        <activity
+            android:name=".ManageCoursesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Manage Courses"
+            android:parentActivityName=".CoeDashboardActivity" />
+
+        <activity
+            android:name=".ManageClassesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Manage Classes"
+            android:parentActivityName=".CoeDashboardActivity" />
+
+        <activity
+            android:name=".ManageSemestersActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Manage Semesters"
+            android:parentActivityName=".CoeDashboardActivity" />
+
+        <activity
+            android:name=".ManageSubjectsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Manage Subjects"
+            android:parentActivityName=".CoeDashboardActivity" />
+
+        <activity
+            android:name=".AddClassActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Add Class"
+            android:parentActivityName=".ManageClassesActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".EditClassActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Edit Class"
+            android:parentActivityName=".ManageClassesActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ClassDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Class Details"
+            android:parentActivityName=".ManageClassesActivity" />
+
+        <activity
+            android:name=".ClassStudentsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Class Students"
+            android:parentActivityName=".ClassDetailsActivity" />
+
+        <!-- COE Timetable Management -->
+        <activity
+            android:name=".AddTimetableEntryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Add Timetable Entry"
+            android:parentActivityName=".CoeDashboardActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".EditTimetableEntryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Edit Timetable Entry"
+            android:parentActivityName=".CoeDashboardActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- ================= HOD DASHBOARD & ACTIVITIES ================= -->
+
+        <activity
+            android:name=".HodDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:launchMode="singleTop" />
+
+        <activity android:name=".HodDepartmentDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Department"/>
+
+        <activity
+            android:name=".HodSubjectsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Subject Management"
+            android:parentActivityName=".HodDashboardActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".AttendanceReportsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Attendance Reports"
+            android:parentActivityName=".HodDashboardActivity" />
+
+        <activity android:name=".AttendanceSessionDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Attendance Session Detail"/>
+
+        <activity android:name=".StudentAttendanceAnalyticsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Student Attendance Analytics"/>
+
+        <activity android:name=".DefaulterListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Defaulter list generation"/>
+
+        <activity android:name=".DefaulterListActivity_COE"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Defaulter list generation"/>
+
+        <activity android:name=".MarkStudentAttendanceActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="mark student attendance"
+            android:parentActivityName=".MarkAttendanceHODActivity"/>
+
+        <activity android:name="StudentAttendanceAnalysisActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Student Attendance Analysis"/>
+
+        <activity android:name=".AttendanceReportActivity_COE"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Report on attendance for coe"/>
+        <activity
+            android:name=".HodTimetableActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Timetable Management"
+            android:parentActivityName=".HodDashboardActivity" />
+
+        <activity
+            android:name=".HodLeaveApprovalsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Leave Approvals"
+            android:parentActivityName=".HodDashboardActivity" />
+
+        <!-- HOD Subject Management -->
+        <activity
+            android:name=".AddSubjectActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Add Subject"
+            android:parentActivityName=".HodSubjectsActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".AddSubjectActivityHOD"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Add Subject (HOD)"
+            android:parentActivityName=".HodSubjectsActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".AssignFacultyToSubjectActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Assign Faculty"
+            android:parentActivityName=".HodSubjectsActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- ================= FACULTY DASHBOARD & ACTIVITIES ================= -->
+
+        <activity
+            android:name=".FacultyDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".FacultyFirstLoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS" />
+
+        <activity
+            android:name=".FacultyProfileSetupActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS" />
+
+        <!-- ================= STUDENT DASHBOARD & ACTIVITIES ================= -->
+
+        <activity
+            android:name=".StudentDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".StudentsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Students" />
+
+        <activity
+            android:name=".StudentDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Student Details"
+            android:parentActivityName=".StudentsActivity" />
+
+        <activity
+            android:name=".StudentAdditionalDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Student Additional Details"
+            android:parentActivityName=".StudentDetailsActivity" />
+
+        <activity
+            android:name=".StudentProfileSetupActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS" />
+
+        <!-- ================= APPLICATION & ADMISSION SYSTEM ================= -->
+
+        <activity
+            android:name=".ApplicationFormActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SynapseMIS" />
+
+        <activity
+            android:name=".ApplicationSuccessActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS" />
+
+        <activity
+            android:name=".TrackApplicationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS" />
+
+        <activity
+            android:name=".ApplicationDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Application Details" />
+
+        <activity
+            android:name=".ApproveStudentsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Approve Students"
+            android:parentActivityName=".CoeDashboardActivity" />
+
+        <activity
+            android:name=".CompleteEnrollmentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Complete Enrollment" />
+
+        <activity
+            android:name=".CoeApplicationReviewActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Application Review"
+            android:parentActivityName=".CoeDashboardActivity" />
+
+        <activity
+            android:name=".CoeEnrollmentApprovalActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Enrollment Approval"
+            android:parentActivityName=".CoeDashboardActivity" />
+
+        <!-- ================= EXAM MANAGEMENT ================= -->
+
+        <activity
+            android:name=".ExamManagementActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Exam Management"
+            android:parentActivityName=".CoeDashboardActivity" />
+
+        <activity
+            android:name=".ManageExamsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Manage Exams"
+            android:parentActivityName=".ExamManagementActivity" />
+
+        <activity
+            android:name=".CreateExamActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Create Exam"
+            android:parentActivityName=".ExamManagementActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".CreateStudentsTestActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Create Student Test"
+            android:parentActivityName=".ExamManagementActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Exam Creation Steps (Kotlin) -->
+        <activity
+            android:name=".ExamCreationStep1Activity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Exam Creation - Step 1"
+            android:parentActivityName=".CreateExamActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ExamCreationStep2Activity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Exam Creation - Step 2"
+            android:parentActivityName=".CreateExamActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ExamCreationStep3Activity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Exam Creation - Step 3"
+            android:parentActivityName=".CreateExamActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ExamCreationStep4Activity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Exam Creation - Step 4"
+            android:parentActivityName=".CreateExamActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ExamDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Exam Details"
+            android:parentActivityName=".ExamManagementActivity" />
+
+        <activity
+            android:name=".ExamHistoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Exam History"
+            android:parentActivityName=".ExamManagementActivity" />
+
+        <activity
+            android:name=".AssignInvigilatorsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Assign Invigilators"
+            android:parentActivityName=".ExamDetailsActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".EnterMarksActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Enter Marks"
+            android:parentActivityName=".ExamManagementActivity"/>
+
+        <activity
+            android:name=".EnterSubjectMarksActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Enter Subject Marks"
+            android:parentActivityName=".EnterMarksActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- ================= ATTENDANCE MANAGEMENT ================= -->
+
+        <activity
+            android:name=".MonthlyAttendanceActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Monthly Attendance" />
+
+        <activity
+            android:name=".OverallAttendanceActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Overall Attendance" />
+
+        <activity
+            android:name=".SemesterAttendanceActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Semester Attendance" />
+
+        <activity
+            android:name=".MarkAttendanceHODActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Mark Attendance" />
+
+        <activity
+            android:name=".MarkAttendanceCOEActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Mark Attendance" />
+
+        <activity android:name=".FacultyTimetableActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Faculty TimeTable"/>
+
+        <activity android:name=".StudentTimetableActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Student TimeTable"/>
+
+        <activity android:name=".MarkAttendanceFacultyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Mark Attendance Faculty"/>
+
+        <activity
+            android:name=".AttendanceDraftsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Draft Attendance"/>
+
+        <activity android:name="StudentAttendanceAnalysisActivity_HOD"
+            android:exported="false"/>
+
+        <activity android:name=".ViewAttendanceFacultyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="View Attendance Faculty"/>
+
+        <activity
+            android:name=".AttendanceDraftDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Draft Attendance"/>
+
+        <activity android:name=".JoinClassActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Join Class"/>
+
+
+        <activity android:name=".FacultyMarksEntryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Faculty Marks Entry"/>
+
+        <activity
+            android:name=".CoeMarksPublishActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Publish Marks"
+            android:parentActivityName=".ManageExamsActivity" />
+
+        <!-- ================= MISSING: Add these before </application> ================= -->
+
+        <!-- Faculty Marks -->
+        <activity
+            android:name=".FacultySubjectsListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="My Subjects"
+            android:parentActivityName=".ManageExamsActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- HOD Marks Moderation -->
+        <activity
+            android:name=".HodMarksManagementActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Marks Management"
+            android:parentActivityName=".ManageExamsActivity" />
+
+        <activity
+            android:name=".ModeratorMarksActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Moderate Marks"
+            android:parentActivityName=".HodMarksManagementActivity"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Faculty Exam Schedule -->
+        <activity
+            android:name=".FacultyExamScheduleActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Exam Schedule"
+            android:parentActivityName=".FacultyDashboardActivity" />
+
+        <!-- Faculty Session Round (Surveying) -->
+        <activity
+            android:name=".SessionRoundActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Session Round"
+            android:parentActivityName=".FacultyDashboardActivity" />
+
+        <activity
+            android:name=".AddRoomAllocationActivity"
+            android:exported="false" />
+
+        <activity android:name=".MySubjectsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Faculty Subjects"/>
+
+        <activity android:name=".FacultyMarksEntryListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="List the exams for faculty"/>
+        
+        <activity android:name=".HodMarksModerationListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="List the exams for HOD"/>
+
+        <activity android:name=".HodMarksModerationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Moderate Marks"/>
+
+        <activity android:name=".GenerateResultActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Generate Result"/>
+
+        <activity android:name=".ResultDisplayActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Result Display"/>
+
+        <activity android:name=".ExamMarksTrackerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Track Exams"/>
+
+        <activity android:name=".SelectExamTrackActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SynapseMIS"
+            android:label="Select exams for tracking"/>
+
+        <!-- 1. Timetable List -->
+        <activity
+            android:name=".TimetableListActivity"
+            android:exported="false"
+            android:label="Timetables"
+            android:theme="@style/Theme.SynapseMIS" />
+
+        <!-- 2. Create Timetable -->
+        <activity
+            android:name=".CreateTimetableActivity"
+            android:exported="false"
+            android:label="Create Timetable"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.SynapseMIS" />
+
+        <!-- 3. Manage Timetable (view + delete + PDF + share) -->
+        <activity
+            android:name=".ManageTimetableActivity"
+            android:exported="false"
+            android:label="Manage Timetable"
+            android:theme="@style/Theme.SynapseMIS" />
+
+        <!-- 4. Edit Timetable -->
+        <activity
+            android:name=".EditTimetableActivity"
+            android:exported="false"
+            android:label="Edit Timetable"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.SynapseMIS" />
+
+        <activity android:name=".HodViewTimetableActivity"
+            android:exported="false"
+            android:label="View Timetable for HOD"/>
+
+        <activity android:name=".GenerateResultActivity_HOD"
+            android:exported="false"
+            android:label="Genrate result for owm dept"/>
+    </application>
+</manifest>

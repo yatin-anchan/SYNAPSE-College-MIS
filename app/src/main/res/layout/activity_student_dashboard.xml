@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_gradient_background"
+    tools:openDrawer="start"
+    android:fitsSystemWindows="true">
+
+    <!-- Main Content -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Animated Stars Background Layer -->
+        <FrameLayout
+            android:id="@+id/stars_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/dashboard_star1"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="50dp"
+                android:layout_gravity="top|end"
+                android:src="@drawable/ic_star"
+                android:alpha="0.6"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/dashboard_star2"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="40dp"
+                android:layout_gravity="top|start"
+                android:src="@drawable/ic_star"
+                android:alpha="0.5"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/dashboard_star3"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginTop="150dp"
+                android:layout_gravity="top|center_horizontal"
+                android:src="@drawable/ic_star"
+                android:alpha="0.7"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/dashboard_star4"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_marginEnd="30dp"
+                android:layout_gravity="center_vertical|end"
+                android:src="@drawable/ic_star"
+                android:alpha="0.6"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/dashboard_star5"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:layout_marginStart="60dp"
+                android:layout_gravity="center_vertical|start"
+                android:src="@drawable/ic_star"
+                android:alpha="0.4"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/dashboard_star6"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginTop="200dp"
+                android:layout_marginStart="120dp"
+                android:layout_gravity="top|start"
+                android:src="@drawable/ic_star"
+                android:alpha="0.5"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/dashboard_star7"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="250dp"
+                android:layout_marginEnd="80dp"
+                android:layout_gravity="top|end"
+                android:src="@drawable/ic_star"
+                android:alpha="0.6"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/dashboard_star8"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginBottom="180dp"
+                android:layout_marginStart="70dp"
+                android:layout_gravity="bottom|start"
+                android:src="@drawable/ic_star"
+                android:alpha="0.5"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/dashboard_star9"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginBottom="220dp"
+                android:layout_marginEnd="60dp"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/ic_star"
+                android:alpha="0.7"
+                android:contentDescription="@null" />
+
+            <ImageView
+                android:id="@+id/dashboard_star10"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_marginBottom="280dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:src="@drawable/ic_star"
+                android:alpha="0.6"
+                android:contentDescription="@null" />
+
+        </FrameLayout>
+
+        <!-- AppBar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/toolbar_gradient"
+                android:elevation="4dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title="Student Dashboard"
+                app:titleTextColor="@android:color/white" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Main Dashboard Content -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Welcome Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="#33667EEA">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:background="@drawable/card_glass_effect">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome Back!"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.05"
+                            android:alpha="0.8" />
+
+                        <TextView
+                            android:id="@+id/tv_student_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Student Name"
+                            android:textColor="@android:color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="4dp"
+                            android:shadowColor="#667EEA"
+                            android:shadowRadius="8" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="12dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ROLL NO"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    android:letterSpacing="0.1"
+                                    android:alpha="0.7" />
+
+                                <TextView
+                                    android:id="@+id/tv_roll_number"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="001"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="4dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="SEMESTER"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    android:letterSpacing="0.1"
+                                    android:alpha="0.7" />
+
+                                <TextView
+                                    android:id="@+id/tv_semester"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="4dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="CLASS"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    android:letterSpacing="0.1"
+                                    android:alpha="0.7" />
+
+                                <TextView
+                                    android:id="@+id/tv_class_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="TY A"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="4dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Performance Section Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Performance"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:shadowColor="#6C63FF"
+                        android:shadowRadius="8" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:background="@drawable/header_line_gradient" />
+
+                </LinearLayout>
+
+                <!-- Performance Cards Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="16dp">
+
+                    <!-- Attendance Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="8dp"
+                        app:cardBackgroundColor="#33667EEA">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:background="@drawable/card_glass_effect">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ATTENDANCE"
+                                android:textColor="@android:color/white"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.1"
+                                android:alpha="0.7" />
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="2dp"
+                                android:background="@android:color/white"
+                                android:alpha="0.5"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="8dp" />
+
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/ic_attendance"
+                                app:tint="@android:color/white" />
+
+                            <TextView
+                                android:id="@+id/tv_attendance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="85%"
+                                android:textColor="@android:color/white"
+                                android:textSize="28sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="4dp"
+                                android:shadowColor="#667EEA"
+                                android:shadowRadius="8" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Overall"
+                                android:textColor="@android:color/white"
+                                android:textSize="11sp"
+                                android:alpha="0.8" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- CGPA Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="140dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="8dp"
+                        app:cardBackgroundColor="#336C63FF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:background="@drawable/card_glass_effect">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CGPA"
+                                android:textColor="@android:color/white"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:letterSpacing="0.1"
+                                android:alpha="0.7" />
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="2dp"
+                                android:background="@android:color/white"
+                                android:alpha="0.5"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="8dp" />
+
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/ic_grade"
+                                app:tint="@android:color/white" />
+
+                            <TextView
+                                android:id="@+id/tv_cgpa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="8.5"
+                                android:textColor="@android:color/white"
+                                android:textSize="28sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="4dp"
+                                android:shadowColor="#6C63FF"
+                                android:shadowRadius="8" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Out of 10"
+                                android:textColor="@android:color/white"
+                                android:textSize="11sp"
+                                android:alpha="0.8" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <!-- Quick Actions Section Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quick Actions"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:shadowColor="#6C63FF"
+                        android:shadowRadius="8" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="16dp"
+                        android:background="@drawable/header_line_gradient" />
+
+                </LinearLayout>
+
+                <!-- Quick Action Buttons Grid -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Row 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginBottom="12dp">
+
+                        <!-- Attendance Button -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_attendance"
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="6dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="4dp"
+                            app:cardBackgroundColor="#331A1A3E"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:padding="12dp"
+                                android:background="@drawable/card_glass_effect">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:src="@drawable/ic_attendance"
+                                    app:tint="#667EEA" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Attendance"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:layout_marginTop="8dp" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- Marks Button -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_marks"
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginEnd="6dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="4dp"
+                            app:cardBackgroundColor="#331A1A3E"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:padding="12dp"
+                                android:background="@drawable/card_glass_effect">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:src="@drawable/ic_grade"
+                                    app:tint="#6C63FF" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Marks"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:layout_marginTop="8dp" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- Timetable Button -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_timetable"
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="6dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="4dp"
+                            app:cardBackgroundColor="#331A1A3E"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:padding="12dp"
+                                android:background="@drawable/card_glass_effect">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:src="@drawable/ic_timetable"
+                                    app:tint="#4FACFE" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Timetable"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:layout_marginTop="8dp" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                    <!-- Row 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginBottom="12dp">
+
+                        <!-- Profile Button -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_profile"
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="6dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="4dp"
+                            app:cardBackgroundColor="#331A1A3E"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:padding="12dp"
+                                android:background="@drawable/card_glass_effect">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:src="@drawable/ic_person"
+                                    app:tint="#667EEA" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Profile"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:layout_marginTop="8dp" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- Assignments Button -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_assignments"
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginEnd="6dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="4dp"
+                            app:cardBackgroundColor="#331A1A3E"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:padding="12dp"
+                                android:background="@drawable/card_glass_effect">
+
+                                <ImageView
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:src="@drawable/ic_assignment"
+                                    app:tint="#4FACFE" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Assignments"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:layout_marginTop="8dp" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!-- CLASS Button (Replaces Library) -->
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/btn_class"
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="6dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="4dp"
+                            app:cardBackgroundColor="#33FF6B35"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:padding="12dp"
+                                android:background="@drawable/card_glass_effect">
+
+                                <ImageView
+                                    android:id="@+id/class_icon"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:src="@drawable/ic_class"
+                                    app:tint="#FF6B35" />
+
+                                <TextView
+                                    android:id="@+id/class_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Join Class"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold"
+                                    android:textAlignment="center"
+                                    android:layout_marginTop="8dp" />
+
+                                <TextView
+                                    android:id="@+id/class_subtitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tap to join"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="9sp"
+                                    android:textAlignment="center"
+                                    android:layout_marginTop="2dp" />
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#1A1A3E"
+        app:headerLayout="@layout/nav_header_student"
+        app:menu="@menu/student_nav_menu"
+        app:itemIconTint="@color/splash_accent"
+        app:itemTextColor="@android:color/white" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

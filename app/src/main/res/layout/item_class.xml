@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:fitsSystemWindows="true"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#331A1A3E"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_glass_effect"
+        android:padding="16dp">
+
+        <!-- Header Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/class_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_class"
+                app:tint="@color/white"
+                android:padding="10dp"
+                android:background="@drawable/circle_gradient" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/class_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class Name"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/course_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Course Name"
+                    android:textColor="@color/splash_accent"
+                    android:textSize="13sp"
+                    android:layout_marginTop="4dp"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+            </LinearLayout>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/status_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active"
+                android:textSize="10sp"
+                app:chipBackgroundColor="@android:color/holo_green_dark"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#22FFFFFF"
+            android:layout_marginVertical="12dp" />
+
+        <!-- Info Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/current_semester_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sem 1"
+                android:textSize="11sp"
+                app:chipBackgroundColor="@color/splash_accent"
+                android:textColor="@android:color/white"
+                app:chipIcon="@drawable/ic_book"
+                app:chipIconTint="@android:color/white" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/class_size_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/60"
+                android:textSize="11sp"
+                android:layout_marginStart="8dp"
+                app:chipBackgroundColor="@android:color/holo_blue_dark"
+                android:textColor="@android:color/white"
+                app:chipIcon="@drawable/ic_person"
+                app:chipIconTint="@android:color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/class_teacher_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teacher: Name"
+            android:textColor="@color/splash_text_color"
+            android:textSize="13sp"
+            android:layout_marginTop="12dp"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="6dp"
+            android:drawableTint="@color/splash_text_secondary"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/batch_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Batch: 2023-2026"
+            android:textColor="@color/splash_text_color"
+            android:textSize="13sp"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_badge"
+            android:drawablePadding="6dp"
+            android:drawableTint="@color/splash_text_secondary" />
+
+        <TextView
+            android:id="@+id/academic_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2025-2026"
+            android:textColor="@color/splash_text_color"
+            android:textSize="13sp"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="6dp"
+            android:drawableTint="@color/splash_text_secondary" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#22FFFFFF"
+            android:layout_marginVertical="12dp" />
+
+        <!-- Actions Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <ImageView
+                android:id="@+id/btn_view"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_visibility"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/splash_accent"
+                android:contentDescription="View Class" />
+
+            <ImageView
+                android:id="@+id/btn_edit"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_edit"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@android:color/holo_orange_light"
+                android:contentDescription="Edit Class"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

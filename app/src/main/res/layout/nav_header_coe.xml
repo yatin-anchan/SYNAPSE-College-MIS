@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="bottom"
+    android:background="@drawable/nav_header_background">
+
+    <!-- Profile Image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/nav_header_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_profile_placeholder"
+        android:layout_marginBottom="12dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@android:color/white" />
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/nav_header_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vice Principal"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Email -->
+    <TextView
+        android:id="@+id/nav_header_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="coe@college.com"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:alpha="0.9"
+        android:layout_marginTop="4dp" />
+
+    <!-- Role -->
+    <TextView
+        android:id="@+id/nav_header_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Controller of Examinations"
+        android:textColor="@android:color/white"
+        android:textSize="11sp"
+        android:alpha="0.8"
+        android:layout_marginTop="2dp" />
+
+</LinearLayout>

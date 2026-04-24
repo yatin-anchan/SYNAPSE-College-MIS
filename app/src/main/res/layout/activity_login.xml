@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_gradient_background">
+
+    <!-- Animated Orbits Container -->
+    <FrameLayout
+        android:id="@+id/orbits_container"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp">
+
+        <!-- Orbit 1 - Outer -->
+        <ImageView
+            android:id="@+id/orbit1"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_orbit_ring"
+            android:alpha="0.3" />
+
+        <!-- Orbit 2 - Middle -->
+        <ImageView
+            android:id="@+id/orbit2"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_orbit_ring"
+            android:alpha="0.5" />
+
+        <!-- Orbit 3 - Inner -->
+        <ImageView
+            android:id="@+id/orbit3"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_orbit_ring"
+            android:alpha="0.7" />
+
+        <!-- Center Logo -->
+        <ImageView
+            android:id="@+id/center_logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_synapse_logo"
+            android:elevation="4dp" />
+    </FrameLayout>
+
+    <!-- Login Form Container -->
+    <LinearLayout
+        android:id="@+id/login_form_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orbits_container"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to SYNAPSE"
+            android:textColor="@color/splash_text_color"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/subtitle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign in to continue"
+            android:textColor="@color/splash_text_secondary"
+            android:textSize="16sp"
+            android:layout_marginBottom="32dp"
+            android:alpha="0.9" />
+
+        <!-- Email Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="#1A1A3E"
+            app:boxStrokeColor="@color/splash_accent"
+            app:boxStrokeWidth="2dp"
+            app:hintTextColor="@color/splash_text_secondary"
+            app:startIconDrawable="@drawable/ic_email"
+            app:startIconTint="@color/splash_accent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/splash_text_color"
+                android:textColorHint="@color/splash_text_secondary"
+                android:padding="16dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="#1A1A3E"
+            app:boxStrokeColor="@color/splash_accent"
+            app:boxStrokeWidth="2dp"
+            app:hintTextColor="@color/splash_text_secondary"
+            app:startIconDrawable="@drawable/ic_lock"
+            app:startIconTint="@color/splash_accent"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/splash_accent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="@color/splash_text_color"
+                android:textColorHint="@color/splash_text_secondary"
+                android:padding="16dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Forgot Password & First Time Login Links -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <!-- Forgot Password -->
+            <TextView
+                android:id="@+id/forgot_password_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password?"
+                android:textColor="@color/splash_accent"
+                android:textSize="14sp"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <!-- Separator -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" | "
+                android:textColor="@color/splash_accent"
+                android:textSize="14sp"
+                android:alpha="0.5" />
+
+            <!-- First Time Login Link -->
+            <TextView
+                android:id="@+id/first_login_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Time Login?"
+                android:textColor="@color/splash_accent"
+                android:textSize="14sp"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+        </LinearLayout>
+
+        <!-- Login Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Sign In"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            app:cornerRadius="12dp"
+            app:backgroundTint="@color/splash_accent"
+            android:textColor="@android:color/white"
+            android:elevation="4dp" />
+
+
+        <!-- Loading Indicator -->
+        <ProgressBar
+            android:id="@+id/login_progress"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="16dp"
+            android:indeterminateTint="@color/splash_accent"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- Bottom decoration -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="2dp"
+            android:background="@color/splash_accent"
+            android:alpha="0.5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SYNAPSE"
+            android:textColor="@color/splash_text_secondary"
+            android:textSize="12sp"
+            android:letterSpacing="0.2"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:alpha="0.7" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="2dp"
+            android:background="@color/splash_accent"
+            android:alpha="0.5" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "114148402102",
+    "project_id": "synapse-b0563",
+    "storage_bucket": "synapse-b0563.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114148402102:android:211ad71730631948839717",
+        "android_client_info": {
+          "package_name": "com.projectbyyatin.synapse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxNzbJxIhMhNP7HPKpqT98zvSS__E-700"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114148402102:android:06744956046eeeb0839717",
+        "android_client_info": {
+          "package_name": "com.projectbyyatin.synapsemis"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxNzbJxIhMhNP7HPKpqT98zvSS__E-700"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

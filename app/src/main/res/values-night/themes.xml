@@ -1,0 +1,75 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme for Dark Mode -->
+    <style name="Base.Theme.SynapseMIS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary colors -->
+        <item name="colorPrimary">#6C63FF</item>
+        <item name="colorPrimaryVariant">#5A55D8</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <!-- Secondary colors -->
+        <item name="colorSecondary">#6C63FF</item>
+        <item name="colorSecondaryVariant">#5A55D8</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+
+        <!-- Dark theme background -->
+        <item name="android:colorBackground">#121212</item>
+        <item name="colorSurface">#1E1E1E</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+
+        <!-- TextInputLayout -->
+        <item name="textInputStyle">@style/Widget.Synapse.TextInputLayout</item>
+
+        <!-- Force light dialogs even in dark mode -->
+        <item name="alertDialogTheme">@style/LightAlertDialog</item>
+        <item name="materialAlertDialogTheme">@style/LightAlertDialog</item>
+    </style>
+
+    <style name="Theme.SynapseMIS" parent="Base.Theme.SynapseMIS" />
+
+    <!-- TextInputLayout Style for Dark Mode -->
+    <style name="Widget.Synapse.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">#424242</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="hintTextColor">#9E9E9E</item>
+        <item name="android:textColorHint">#9E9E9E</item>
+    </style>
+
+    <!-- Light Alert Dialog - Still light even in dark mode -->
+    <style name="LightAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:background">@android:color/white</item>
+        <item name="colorSurface">@android:color/white</item>
+        <item name="colorOnSurface">#000000</item>
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="android:textColorSecondary">#666666</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialog.Title.Text.Light</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertDialog.Body.Text.Light</item>
+        <item name="buttonBarPositiveButtonStyle">@style/CustomDialogButton.Positive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/CustomDialogButton.Negative</item>
+    </style>
+
+    <!-- Dialog Title Text Style -->
+    <style name="MaterialAlertDialog.Title.Text.Light" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Dialog Body Text Style -->
+    <style name="MaterialAlertDialog.Body.Text.Light" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Positive Button Style -->
+    <style name="CustomDialogButton.Positive" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#6C63FF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!-- Negative Button Style -->
+    <style name="CustomDialogButton.Negative" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#666666</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+</resources>

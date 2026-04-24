@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardDefaulterItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/splash_card_background"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/splash_card_stroke">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <!-- ── Student Header ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDefaulterName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student Name"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/splash_text_primary" />
+
+                <TextView
+                    android:id="@+id/tvDefaulterRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Roll No: —"
+                    android:textSize="12sp"
+                    android:textColor="@color/splash_text_secondary"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <!-- Risk Badge -->
+            <TextView
+                android:id="@+id/tvDefaulterSubjectCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 subjects below threshold"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_chip_red"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/splash_border"
+            android:layout_marginBottom="8dp" />
+
+        <!-- ── Subject Breakdown ── -->
+        <TextView
+            android:id="@+id/tvDefaulterSubjectList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Mathematics (MTH101) — 62.5% [5/8]\n• Physics (PHY102) — 58.3% [7/12]"
+            android:textSize="13sp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/splash_text_primary" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

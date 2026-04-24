@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Outer glow layer -->
+    <path
+        android:fillColor="@color/starglow"
+        android:fillAlpha="0.4"
+        android:pathData="M12,1L14,9L22,11L14,13L12,21L10,13L2,11L10,9Z" />
+
+    <!-- Main star -->
+    <path
+        android:fillColor="@color/starglow"
+        android:pathData="M12,2L13.5,8.5L20,10L13.5,11.5L12,18L10.5,11.5L4,10L10.5,8.5Z" />
+
+    <!-- Inner bright core -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.8"
+        android:pathData="M12,7L12.8,9.2L15,10L12.8,10.8L12,13L11.2,10.8L9,10L11.2,9.2Z" />
+</vector>

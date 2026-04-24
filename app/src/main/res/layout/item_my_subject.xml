@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#331A1A3E">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/card_glass_effect"
+        android:padding="16dp">
+
+        <!-- Subject Icon -->
+        <ImageView
+            android:id="@+id/subject_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_book"
+            android:padding="10dp"
+            android:background="@drawable/circle_gradient"
+            app:tint="@android:color/white"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Subject Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/subject_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Structures and Algorithms"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/subject_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CS301"
+                android:textColor="@color/splash_accent"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/semester_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semester 3"
+                    android:textColor="@color/splash_text_secondary"
+                    android:textSize="12sp"/>
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle_gradient"/>
+
+                <TextView
+                    android:id="@+id/course_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B.Tech Computer Science"
+                    android:textColor="@color/splash_text_secondary"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <!-- Chips Row -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/type_chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:text="Theory"
+                    android:textSize="11sp"
+                    android:textColor="@android:color/white"
+                    app:chipBackgroundColor="@color/chip_theory"
+                    app:chipStrokeWidth="0dp"
+                    style="@style/Widget.MaterialComponents.Chip.Action"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/credits_chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="8dp"
+                    android:text="4 Credits"
+                    android:textSize="11sp"
+                    android:textColor="@android:color/white"
+                    app:chipBackgroundColor="#66FFFFFF"
+                    app:chipStrokeWidth="0dp"
+                    style="@style/Widget.MaterialComponents.Chip.Action"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Arrow Icon -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_forward"
+            android:layout_gravity="center_vertical"
+            app:tint="@color/splash_accent"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

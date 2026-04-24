@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SYNAPSE</string>
+
+    <!-- Splash Screen Strings -->
+    <string name="app_name_synapse">SYNAPSE</string>
+    <string name="app_tagline">College Management System</string>
+    <string name="powered_by_text">Powered by Innovation</string>
+    <string name="app_logo">SYNAPSE Logo</string>
+    <string name="institution_badge">Institution Badge</string>
+    <string name="decorative_star">Decorative Star</string>
+
+    <!-- Navigation Drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Dashboard Labels -->
+    <string name="total_students">Total Students</string>
+    <string name="total_faculty">Total Faculty</string>
+    <string name="total_departments">Total Departments</string>
+    <string name="total_classes">Total Classes</string>
+    <string name="avg_attendance">Average Attendance</string>
+    <string name="avg_exam_marks">Average Exam Marks</string>
+    <string name="pending_complaints">Pending Complaints</string>
+
+    <!-- Navigation Menu Items -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_departments">Departments</string>
+    <string name="nav_events">Events</string>
+    <string name="nav_attendance">Attendance</string>
+    <string name="nav_exams">Exams</string>
+    <string name="nav_timetable">Timetable</string>
+    <string name="nav_complaints">Complaints</string>
+    <string name="nav_committees">Committees</string>
+    <string name="nav_chat">Chat</string>
+    <string name="nav_profile">Edit Profile</string>
+    <string name="nav_logout">Logout</string>
+    <string name="manage_exams_marks"><![CDATA[Manage Exams & Marks]]></string>
+    <string name="create_account_login"><![CDATA[Create Account & Login]]></string>
+    <string name="step_4_review_confirm"><![CDATA[Step 4: Review & Confirm]]></string>
+    <string name="confirm_create_exam"><![CDATA[Confirm & Create Exam]]></string>
+    <string name="next_review_confirm"><![CDATA[Next: Review & Confirm]]></string>
+    <string name="day_date"><![CDATA[📅 Day & Date]]></string>
+
+</resources>

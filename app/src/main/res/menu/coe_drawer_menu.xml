@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Dashboard" />
+
+        <item
+            android:id="@+id/nav_departments"
+            android:icon="@drawable/ic_departments"
+            android:title="Departments" />
+
+        <item
+            android:id="@+id/nav_faculties"
+            android:icon="@drawable/ic_faculty"
+            android:title="Faculties" />
+
+        <item
+            android:id="@+id/nav_students"
+            android:icon="@drawable/ic_students"
+            android:title="Students" />
+
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/ic_events"
+            android:title="Events" />
+
+        <item
+            android:id="@+id/nav_attendance"
+            android:icon="@drawable/ic_exam"
+            android:title="Attendance Reports" />
+
+        <item android:id="@+id/nav_mark_attendance"
+            android:icon="@drawable/ic_attendance"
+            android:title="Mark Attendance"/>
+
+        <item
+            android:id="@+id/nav_exams"
+            android:icon="@drawable/ic_exams"
+            android:title="Exams" />
+
+        <item
+            android:id="@+id/nav_timetable"
+            android:icon="@drawable/ic_timetable"
+            android:title="Timetable" />
+
+        <item
+            android:id="@+id/nav_complaints"
+            android:icon="@drawable/ic_complaints"
+            android:title="Complaints" />
+
+        <item
+            android:id="@+id/nav_committees"
+            android:icon="@drawable/ic_committees"
+            android:title="Committees" />
+
+        <!-- NEW: Application Management -->
+        <item
+            android:id="@+id/nav_applications"
+            android:icon="@drawable/ic_application"
+            android:title="Application Management" />
+
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_chat"
+            android:title="Chat" />
+    </group>
+
+    <item android:title="Account">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_profile"
+                android:title="Edit Profile" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

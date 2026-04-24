@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/card_glass_effect">
+
+    <!-- Course Selection -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/course_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select Course"
+        app:boxBackgroundColor="#22FFFFFF"
+        app:boxStrokeColor="@color/splash_accent"
+        app:hintTextColor="@color/splash_accent"
+        app:startIconDrawable="@drawable/ic_book"
+        app:startIconTint="@color/splash_accent"
+        android:layout_marginBottom="16dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/course_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:padding="16dp"
+            android:inputType="none"
+            android:focusable="false"
+            android:cursorVisible="false" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Subject Selection -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/subject_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select Subject"
+        app:boxBackgroundColor="#22FFFFFF"
+        app:boxStrokeColor="@color/splash_accent"
+        app:hintTextColor="@color/splash_accent"
+        app:startIconDrawable="@drawable/ic_book"
+        app:startIconTint="@color/splash_accent"
+        android:layout_marginBottom="16dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/subject_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:padding="16dp"
+            android:inputType="none"
+            android:focusable="false"
+            android:cursorVisible="false" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- Exam Date -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Exam Date"
+            android:textColor="@color/splash_text_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/exam_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Selected"
+            android:textColor="@color/splash_accent"
+            android:textSize="13sp"
+            android:layout_marginEnd="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_select_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select"
+            android:textSize="11sp"
+            app:icon="@drawable/ic_calendar"
+            app:backgroundTint="@color/splash_accent"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Time Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <!-- Start Time -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Start Time"
+            app:boxBackgroundColor="#22FFFFFF"
+            app:boxStrokeColor="@color/splash_accent"
+            app:hintTextColor="@color/splash_accent"
+            app:startIconDrawable="@drawable/ic_time"
+            app:startIconTint="@color/splash_accent"
+            android:layout_marginEnd="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/start_time_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- End Time -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="End Time"
+            app:boxBackgroundColor="#22FFFFFF"
+            app:boxStrokeColor="@color/splash_accent"
+            app:hintTextColor="@color/splash_accent"
+            app:startIconDrawable="@drawable/ic_time"
+            app:startIconTint="@color/splash_accent"
+            android:layout_marginStart="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/end_time_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <!-- Venue -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Exam Venue"
+        app:boxBackgroundColor="#22FFFFFF"
+        app:boxStrokeColor="@color/splash_accent"
+        app:hintTextColor="@color/splash_accent"
+        app:startIconDrawable="@drawable/ic_location"
+        app:startIconTint="@color/splash_accent"
+        android:layout_marginBottom="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/venue_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:inputType="textCapWords" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Max Marks -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Max Marks"
+        app:boxBackgroundColor="#22FFFFFF"
+        app:boxStrokeColor="@color/splash_accent"
+        app:hintTextColor="@color/splash_accent"
+        app:startIconDrawable="@drawable/ic_grade"
+        app:startIconTint="@color/splash_accent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/max_marks_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:inputType="number"
+            android:text="100" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

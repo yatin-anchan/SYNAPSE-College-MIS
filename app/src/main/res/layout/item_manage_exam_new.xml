@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#331A1A3E">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_glass_effect"
+        android:padding="16dp">
+
+        <!-- Row 1: Exam Name + Status Chip -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/exam_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="End Semester Exam"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginEnd="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/status_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Draft"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                app:chipBackgroundColor="@android:color/darker_gray"
+                app:chipMinHeight="26dp" />
+
+        </LinearLayout>
+
+        <!-- Row 2: Semester Chip + Academic Year -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/semester_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sem 1"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                app:chipBackgroundColor="@color/splash_accent"
+                app:chipMinHeight="26dp" />
+
+            <TextView
+                android:id="@+id/academic_year"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2025-2026"
+                android:textColor="#88FFFFFF"
+                android:textSize="12sp"
+                android:layout_marginStart="10dp"
+                android:drawableStart="@drawable/ic_calendar"
+                android:drawablePadding="4dp"
+                android:drawableTint="#88FFFFFF" />
+
+        </LinearLayout>
+
+        <!-- Row 3: Exam Period + Subjects Count -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/exam_period"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="01 Jan 2026 - 15 Jan 2026"
+                android:textColor="#88FFFFFF"
+                android:textSize="12sp"
+                android:drawableStart="@drawable/ic_calendar"
+                android:drawablePadding="4dp"
+                android:drawableTint="#88FFFFFF" />
+
+            <TextView
+                android:id="@+id/subjects_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 Subjects"
+                android:textColor="#88FFFFFF"
+                android:textSize="12sp"
+                android:drawableStart="@drawable/ic_book"
+                android:drawablePadding="4dp"
+                android:drawableTint="#88FFFFFF" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#22FFFFFF"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Row 4: Marks Status Chip + Progress Text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/marks_status_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entry Enabled"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                app:chipBackgroundColor="@android:color/holo_orange_dark"
+                app:chipMinHeight="24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/marks_progress_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Not started"
+                android:textColor="#66FFFFFF"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+        <!-- Row 5: Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <!-- View Button -->
+            <ImageView
+                android:id="@+id/btn_view"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/ic_arrow_forward"
+                android:background="#224FACFE"
+                android:padding="8dp"
+                app:tint="@color/splash_accent"
+                android:layout_marginStart="8dp" />
+
+            <!-- Enable Marks Entry Button (COE only) -->
+            <ImageView
+                android:id="@+id/btn_enable_marks_entry"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/ic_edit"
+                android:background="#226C63FF"
+                android:padding="8dp"
+                app:tint="#6C63FF"
+                android:layout_marginStart="8dp"
+                android:visibility="gone" />
+
+            <!-- Enter Marks Button (faculty / HOD / COE) -->
+            <ImageView
+                android:id="@+id/btn_enter_marks"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/ic_book"
+                android:background="#22667EEA"
+                android:padding="8dp"
+                app:tint="#667EEA"
+                android:layout_marginStart="8dp"
+                android:visibility="gone" />
+
+            <!-- Publish Marks Button (COE only) -->
+            <ImageView
+                android:id="@+id/btn_publish_marks"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:src="@drawable/ic_check_circle"
+                android:background="#2200C853"
+                android:padding="8dp"
+                app:tint="@android:color/holo_green_light"
+                android:layout_marginStart="8dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

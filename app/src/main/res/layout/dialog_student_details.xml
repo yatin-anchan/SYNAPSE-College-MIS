@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/splash_gradient_background"
+    android:padding="24dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_person"
+        android:layout_gravity="center_horizontal"
+        app:civ_border_width="4dp"
+        app:civ_border_color="@color/splash_accent" />
+
+    <TextView
+        android:id="@+id/student_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Name"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/status_chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active Student"
+        android:textSize="11sp"
+        app:chipBackgroundColor="@android:color/holo_green_dark"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#22FFFFFF"
+        android:layout_marginVertical="16dp" />
+
+    <TextView
+        android:id="@+id/student_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="email@example.com"
+        android:textColor="@color/splash_text_color"
+        android:textSize="14sp"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/splash_accent"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/student_roll_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll No: 001"
+        android:textColor="@color/splash_text_color"
+        android:textSize="14sp"
+        android:drawableStart="@drawable/ic_badge"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/splash_accent"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/class_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class: TY BCOM A"
+        android:textColor="@color/splash_text_color"
+        android:textSize="14sp"
+        android:drawableStart="@drawable/ic_class"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/splash_accent"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/joined_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joined: 03 Jan 2026"
+        android:textColor="@color/splash_text_color"
+        android:textSize="14sp"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/splash_accent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#22FFFFFF"
+        android:layout_marginVertical="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_call"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Call"
+            android:textSize="13sp"
+            android:layout_marginEnd="8dp"
+            app:icon="@drawable/ic_call"
+            app:iconGravity="textStart"
+            app:backgroundTint="@color/splash_accent"
+            android:textColor="@android:color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Email"
+            android:textSize="13sp"
+            android:layout_marginStart="8dp"
+            app:icon="@drawable/ic_email"
+            app:iconGravity="textStart"
+            app:backgroundTint="@android:color/holo_blue_dark"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,59 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Document outline -->
+    <path
+        android:pathData="M35,20 L70,20 L85,35 L85,100 L35,100 Z"
+        android:strokeWidth="3"
+        android:strokeColor="#6C63FF"
+        android:fillColor="#1A1A2E"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+
+    <!-- Folded corner -->
+    <path
+        android:pathData="M70,20 L70,35 L85,35"
+        android:strokeWidth="3"
+        android:strokeColor="#6C63FF"
+        android:fillColor="#1A1A2E"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+
+    <!-- Document lines -->
+    <path
+        android:pathData="M45,50 L75,50"
+        android:strokeWidth="2"
+        android:strokeColor="#667EEA"
+        android:strokeLineCap="round"/>
+
+    <path
+        android:pathData="M45,60 L70,60"
+        android:strokeWidth="2"
+        android:strokeColor="#667EEA"
+        android:strokeLineCap="round"/>
+
+    <path
+        android:pathData="M45,70 L75,70"
+        android:strokeWidth="2"
+        android:strokeColor="#667EEA"
+        android:strokeLineCap="round"/>
+
+    <path
+        android:pathData="M45,80 L65,80"
+        android:strokeWidth="2"
+        android:strokeColor="#667EEA"
+        android:strokeLineCap="round"/>
+
+    <!-- Draft indicator (pencil icon) -->
+    <path
+        android:pathData="M65,25 L67,27 L75,19 L73,17 Z"
+        android:fillColor="#4FACFE"/>
+
+    <path
+        android:pathData="M63,27 L65,29 L62,32 L60,30 Z"
+        android:fillColor="#4FACFE"/>
+
+</vector>

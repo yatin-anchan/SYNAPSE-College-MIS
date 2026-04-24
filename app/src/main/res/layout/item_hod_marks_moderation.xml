@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#1F1A1A3E">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="14dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="10dp">
+
+        <!-- ══ ROW 1: Roll No  │  Student Name  │  Change dot ══ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Roll No pill -->
+            <TextView
+                android:id="@+id/rollno"
+                android:layout_width="52dp"
+                android:layout_height="28dp"
+                android:gravity="center"
+                android:text="001"
+                android:textColor="@color/splash_accent"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="@drawable/badge_pending"
+                android:paddingHorizontal="6dp" />
+
+            <!-- Student Name -->
+            <TextView
+                android:id="@+id/studentname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="John Doe"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <!-- Change indicator dot (shown when marks differ from original) -->
+            <View
+                android:id="@+id/changeindicator"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/badge_pending"
+                android:visibility="gone" />
+
+            <!-- Absent checkbox + label -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <CheckBox
+                    android:id="@+id/absentcheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@android:color/holo_red_light" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Absent"
+                    android:textColor="#99FFFFFF"
+                    android:textSize="9sp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ══ Thin divider ══ -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="#22FFFFFF" />
+
+        <!-- ══ ROW 2: Column headers ══ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+
+            <!-- "Faculty" label col -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Faculty Entered"
+                android:textColor="#66FFFFFF"
+                android:textSize="10sp"
+                android:gravity="center" />
+
+            <!-- "Moderated" label col -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Moderated"
+                android:textColor="#66FFFFFF"
+                android:textSize="10sp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- ══ ROW 3: Written marks (original read-only │ moderated input) ══ -->
+        <LinearLayout
+            android:id="@+id/written_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="6dp">
+
+            <!-- Row label -->
+            <TextView
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:text="Written"
+                android:textColor="#88FFFFFF"
+                android:textSize="11sp" />
+
+            <!-- Original written (read-only) -->
+            <TextView
+                android:id="@+id/originalwrittentext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="--"
+                android:textColor="#E0FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Moderated written input -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/moderatedwritteninput"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:background="@drawable/edittext_rounded"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:maxLength="5"
+                android:hint="--"
+                android:textColorHint="#44FFFFFF" />
+
+        </LinearLayout>
+
+        <!-- ══ ROW 4: Internal marks (original read-only │ moderated input) ══ -->
+        <LinearLayout
+            android:id="@+id/internal_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="6dp">
+
+            <!-- Row label -->
+            <TextView
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:text="Internal"
+                android:textColor="#88FFFFFF"
+                android:textSize="11sp" />
+
+            <!-- Original internal (read-only) -->
+            <TextView
+                android:id="@+id/originalinternaltext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="--"
+                android:textColor="#E0FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Moderated internal input -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/moderatedinternalinput"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:inputType="numberDecimal"
+                android:gravity="center"
+                android:background="@drawable/edittext_rounded"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:maxLength="5"
+                android:hint="--"
+                android:textColorHint="#44FFFFFF" />
+
+        </LinearLayout>
+
+        <!-- ══ Thin divider ══ -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="8dp"
+            android:background="#22FFFFFF" />
+
+        <!-- ══ ROW 5: Total % │ Grade badge │ Revert button ══ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- "Total:" label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total:"
+                android:textColor="#88FFFFFF"
+                android:textSize="11sp" />
+
+            <!-- Total percentage display -->
+            <TextView
+                android:id="@+id/totalpercentagetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="--"
+                android:textColor="#E0FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <!-- Grade badge -->
+            <TextView
+                android:id="@+id/gradetext"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/badge_accepted"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:text="--"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <!-- Spacer -->
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!-- Revert button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/revertbutton"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Revert"
+                android:textAllCaps="false"
+                android:textColor="#AAAAFF"
+                android:textSize="11sp"
+                android:paddingHorizontal="8dp"
+                app:icon="@drawable/ic_undo"
+                app:iconTint="#AAAAFF"
+                app:iconSize="14dp"
+                app:iconGravity="textStart"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

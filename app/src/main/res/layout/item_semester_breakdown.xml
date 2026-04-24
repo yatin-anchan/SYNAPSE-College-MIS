@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="#11FFFFFF"
+    android:layout_marginBottom="4dp">
+
+    <TextView
+        android:id="@+id/semester_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sem 1"
+        android:textColor="@color/splash_accent"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:minWidth="60dp" />
+
+    <TextView
+        android:id="@+id/semester_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="85.5%"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:minWidth="60dp"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/semester_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="P:45 A:5 L:2 (52)"
+        android:textColor="@color/splash_text_secondary"
+        android:textSize="11sp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="monospace" />
+</LinearLayout>

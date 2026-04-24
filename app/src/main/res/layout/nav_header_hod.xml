@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/nav_header_background"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="bottom">
+
+    <!-- Profile Image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/nav_header_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_profile_placeholder"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/nav_header_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOD Name"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:shadowColor="#6C63FF"
+        android:shadowRadius="8" />
+
+    <!-- Email -->
+    <TextView
+        android:id="@+id/nav_header_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hod@synapse.edu"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:alpha="0.8"
+        android:layout_marginTop="4dp" />
+
+    <!-- Role Badge -->
+    <TextView
+        android:id="@+id/nav_header_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Head of Department"
+        android:textColor="#667EEA"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:background="@drawable/role_badge_background"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

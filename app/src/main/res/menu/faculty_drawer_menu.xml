@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <!-- Dashboard -->
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Dashboard" />
+
+        <!-- My Teaching -->
+        <item
+            android:id="@+id/nav_my_subjects"
+            android:icon="@drawable/ic_book"
+            android:title="My Subjects" />
+
+        <!-- Attendance -->
+        <item
+            android:id="@+id/nav_mark_attendance"
+            android:icon="@drawable/ic_attendance"
+            android:title="Mark Attendance" />
+
+        <item
+            android:id="@+id/nav_view_attendance"
+            android:icon="@drawable/ic_reports"
+            android:title="View Attendance" />
+
+        <!-- Schedule & Exams -->
+        <item
+            android:id="@+id/nav_my_timetable"
+            android:icon="@drawable/ic_timetable"
+            android:title="My Timetable" />
+
+        <item
+            android:id="@+id/nav_marks_entry"
+            android:icon="@drawable/ic_exam"
+            android:title="Marks Entry" />
+
+        <item android:id="@+id/nav_session_round"
+            android:icon="@drawable/ic_session_round"
+            android:title="Session Rounds"/>
+
+    </group>
+
+    <item android:title="Account">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_profile"
+                android:title="My Profile" />
+
+            <item
+                android:id="@+id/nav_complaints"
+                android:icon="@drawable/ic_complaints"
+                android:title="Complaints" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

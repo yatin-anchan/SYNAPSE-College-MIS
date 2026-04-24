@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/exam_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#33FFFFFF"
+    app:cardBackgroundColor="#2A1A1A3E">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_glass_effect"
+        android:padding="20dp">
+
+        <!-- ══ HEADER ROW ══════════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/exam_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Midterm Exam 2026"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/course_semester"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Computer Science • Sem 4"
+                    android:textSize="13sp"
+                    android:textColor="@color/splash_text_color" />
+
+            </LinearLayout>
+
+            <!-- Circular % badge -->
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/circle_gradient">
+
+                <TextView
+                    android:id="@+id/progress_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="done"
+                    android:textSize="9sp"
+                    android:textColor="#AAFFFFFF" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ══ DIVIDER ═════════════════════════════════════════════ -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="16dp"
+            android:background="#22FFFFFF" />
+
+        <!-- ══ STEPPER: dot row ════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <FrameLayout android:layout_width="32dp" android:layout_height="32dp">
+                <View android:layout_width="32dp" android:layout_height="32dp"
+                    android:background="@drawable/stepper_dot_inactive" />
+                <View android:id="@+id/dot_1_fill"
+                    android:layout_width="18dp" android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/stepper_dot_inactive_fill" />
+                <ImageView android:id="@+id/dot_1_check"
+                    android:layout_width="16dp" android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_check"
+                    android:visibility="gone"
+                    app:tint="@android:color/white" />
+            </FrameLayout>
+
+            <View android:id="@+id/line_1_2"
+                android:layout_width="0dp" android:layout_height="3dp" android:layout_weight="1"
+                android:background="@drawable/stepper_line_inactive" />
+
+            <FrameLayout android:layout_width="32dp" android:layout_height="32dp">
+                <View android:layout_width="32dp" android:layout_height="32dp"
+                    android:background="@drawable/stepper_dot_inactive" />
+                <View android:id="@+id/dot_2_fill"
+                    android:layout_width="18dp" android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/stepper_dot_inactive_fill" />
+                <ImageView android:id="@+id/dot_2_check"
+                    android:layout_width="16dp" android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_check"
+                    android:visibility="gone"
+                    app:tint="@android:color/white" />
+            </FrameLayout>
+
+            <View android:id="@+id/line_2_3"
+                android:layout_width="0dp" android:layout_height="3dp" android:layout_weight="1"
+                android:background="@drawable/stepper_line_inactive" />
+
+            <FrameLayout android:layout_width="32dp" android:layout_height="32dp">
+                <View android:layout_width="32dp" android:layout_height="32dp"
+                    android:background="@drawable/stepper_dot_inactive" />
+                <View android:id="@+id/dot_3_fill"
+                    android:layout_width="18dp" android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/stepper_dot_inactive_fill" />
+                <ImageView android:id="@+id/dot_3_check"
+                    android:layout_width="16dp" android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_check"
+                    android:visibility="gone"
+                    app:tint="@android:color/white" />
+            </FrameLayout>
+
+            <View android:id="@+id/line_3_4"
+                android:layout_width="0dp" android:layout_height="3dp" android:layout_weight="1"
+                android:background="@drawable/stepper_line_inactive" />
+
+            <FrameLayout android:layout_width="32dp" android:layout_height="32dp">
+                <View android:layout_width="32dp" android:layout_height="32dp"
+                    android:background="@drawable/stepper_dot_inactive" />
+                <View android:id="@+id/dot_4_fill"
+                    android:layout_width="18dp" android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/stepper_dot_inactive_fill" />
+                <ImageView android:id="@+id/dot_4_check"
+                    android:layout_width="16dp" android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_check"
+                    android:visibility="gone"
+                    app:tint="@android:color/white" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- ══ STEPPER: label row ══════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:id="@+id/step_1_label" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Entered"
+                    android:textSize="10sp" android:textStyle="bold"
+                    android:textColor="#88FFFFFF" android:gravity="center" />
+                <TextView android:id="@+id/step_1_sub" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginTop="2dp"
+                    android:text="0/0" android:textSize="9sp"
+                    android:textColor="#55FFFFFF" android:gravity="center" />
+            </LinearLayout>
+
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:id="@+id/step_2_label" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Submitted"
+                    android:textSize="10sp" android:textStyle="bold"
+                    android:textColor="#88FFFFFF" android:gravity="center" />
+                <TextView android:id="@+id/step_2_sub" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginTop="2dp"
+                    android:text="Pending" android:textSize="9sp"
+                    android:textColor="#55FFFFFF" android:gravity="center" />
+            </LinearLayout>
+
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:id="@+id/step_3_label" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Moderated"
+                    android:textSize="10sp" android:textStyle="bold"
+                    android:textColor="#88FFFFFF" android:gravity="center" />
+                <TextView android:id="@+id/step_3_sub" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginTop="2dp"
+                    android:text="Pending" android:textSize="9sp"
+                    android:textColor="#55FFFFFF" android:gravity="center" />
+            </LinearLayout>
+
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1" />
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:id="@+id/step_4_label" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Published"
+                    android:textSize="10sp" android:textStyle="bold"
+                    android:textColor="#88FFFFFF" android:gravity="center" />
+                <TextView android:id="@+id/step_4_sub" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginTop="2dp"
+                    android:text="Pending" android:textSize="9sp"
+                    android:textColor="#55FFFFFF" android:gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ══ DIVIDER ═════════════════════════════════════════════ -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="16dp"
+            android:background="#22FFFFFF" />
+
+        <!-- ══ STATS ROW ═══════════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:background="@drawable/stat_pill_background"
+                android:padding="12dp" android:layout_marginEnd="6dp">
+                <TextView android:id="@+id/completed_subjects"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0/0" android:textSize="18sp" android:textStyle="bold"
+                    android:textColor="@android:color/white" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp" android:text="Subjects Done"
+                    android:textSize="11sp" android:textColor="@color/splash_text_secondary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical"
+                android:background="@drawable/stat_pill_background"
+                android:padding="12dp" android:layout_marginStart="6dp"
+                android:gravity="center_vertical">
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progress_bar"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    app:trackThickness="8dp" app:trackCornerRadius="4dp"
+                    app:indicatorColor="@color/splash_accent"
+                    app:trackColor="#33FFFFFF" android:progress="0" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" android:text="Entry Progress"
+                    android:textSize="11sp" android:textColor="@color/splash_text_secondary" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ══ EXPAND BUTTON ───────────────────────────────────────
+             ✅ FIXED: removed style="Widget.MaterialComponents.Button.TextButton"
+             which requires Material3 theme attrs not in Theme.SynapseMIS (AppCompat).
+             Using a plain TextView styled as a button instead — crash-proof.
+        ══════════════════════════════════════════════════════════ -->
+        <TextView
+            android:id="@+id/expand_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="12dp"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:text="▼  View Subjects"
+            android:textColor="@color/splash_accent"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="@drawable/stat_pill_background"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- ══ SUBJECTS HORIZONTAL LIST ════════════════════════════ -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/subjects_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            android:clipToPadding="false"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

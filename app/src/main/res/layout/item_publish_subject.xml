@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#331A1A3E">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_glass_effect"
+        android:padding="16dp">
+
+        <!-- Row 1: Subject Code + Name + Status Chip -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="6dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/subject_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CS101"
+                    android:textColor="@color/splash_accent"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05" />
+
+                <TextView
+                    android:id="@+id/subject_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data Structures"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/status_chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                app:chipBackgroundColor="@android:color/holo_orange_dark"
+                app:chipMinHeight="28dp" />
+        </LinearLayout>
+
+        <!-- Row 2: Course Name -->
+        <TextView
+            android:id="@+id/course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B.Tech Computer Science"
+            android:textColor="#88FFFFFF"
+            android:textSize="12sp"
+            android:drawableStart="@drawable/ic_book"
+            android:drawablePadding="6dp"
+            android:drawableTint="#88FFFFFF"
+            android:layout_marginBottom="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#22FFFFFF"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Row 3: Students count + Moderate button + Check icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_person"
+                app:tint="@color/splash_accent" />
+
+            <TextView
+                android:id="@+id/students_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="45 / 60 students"
+                android:textColor="#AAFFFFFF"
+                android:textSize="12sp"
+                android:layout_marginStart="6dp" />
+
+            <!-- Check icon (visible when ready) -->
+            <ImageView
+                android:id="@+id/check_icon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_check_circle"
+                app:tint="@android:color/holo_green_light"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone" />
+
+            <!-- Moderate Button -->
+            <ImageView
+                android:id="@+id/moderate_button"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_edit"
+                android:background="#226C63FF"
+                android:padding="7dp"
+                app:tint="@color/splash_accent"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <!-- Submitted by (conditional) -->
+        <TextView
+            android:id="@+id/submitted_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submitted: 12 Jan, 10:30 AM"
+            android:textColor="#66FFFFFF"
+            android:textSize="11sp"
+            android:layout_marginTop="6dp"
+            android:visibility="gone" />
+
+        <!-- Moderated by (conditional) -->
+        <TextView
+            android:id="@+id/moderated_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moderated: 13 Jan, 02:00 PM"
+            android:textColor="#66FFFFFF"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

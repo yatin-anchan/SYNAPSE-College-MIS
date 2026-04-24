@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#331A1A3E"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_glass_effect"
+        android:padding="12dp">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Department Image -->
+            <ImageView
+                android:id="@+id/department_image"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_departments"
+                android:scaleType="centerCrop"
+                app:tint="@color/splash_accent" />
+
+            <!-- Department Info -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/department_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Department Name"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/department_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DEPT001"
+                    android:textColor="@color/splash_text_secondary"
+                    android:textSize="11sp"
+                    android:fontFamily="monospace"
+                    android:layout_marginTop="2dp" />
+
+                <!-- Chips Row -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/college_chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="JR"
+                        android:textSize="9sp"
+                        app:chipMinHeight="20dp"
+                        app:chipBackgroundColor="@color/splash_accent"
+                        android:textColor="@android:color/white"
+                        app:chipStrokeWidth="0dp"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/stream_chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="Science"
+                        android:textSize="9sp"
+                        android:layout_marginStart="4dp"
+                        app:chipMinHeight="20dp"
+                        app:chipBackgroundColor="@android:color/holo_green_dark"
+                        android:textColor="@android:color/white"
+                        app:chipStrokeWidth="0dp"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btn_manage"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_settings"
+                    android:padding="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:tint="@color/splash_accent"
+                    android:contentDescription="Manage Department" />
+
+                <ImageView
+                    android:id="@+id/btn_delete"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_delete"
+                    android:padding="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:tint="@android:color/holo_red_light"
+                    android:contentDescription="Delete Department" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Details Section (Compact) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:paddingTop="8dp"
+            android:background="@drawable/top_border">
+
+            <!-- HOD Info -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/hod_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dr. John Doe"
+                    android:textColor="@color/splash_text_color"
+                    android:textSize="12sp"
+                    android:drawableStart="@drawable/ic_person"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/splash_accent"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/faculty_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12 Faculty"
+                    android:textColor="@color/splash_text_secondary"
+                    android:textSize="11sp"
+                    android:layout_marginTop="4dp"
+                    android:drawableStart="@drawable/ic_work"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/splash_text_secondary" />
+            </LinearLayout>
+
+            <!-- Student Count (Right aligned) -->
+            <TextView
+                android:id="@+id/student_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="150 Students"
+                android:textColor="@color/splash_text_secondary"
+                android:textSize="11sp"
+                android:layout_gravity="center_vertical"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="4dp"
+                android:drawableTint="@color/splash_text_secondary" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/splash_gradient_background"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/toolbar_gradient"
+        android:elevation="4dp"
+        app:titleTextColor="@android:color/white"
+        app:subtitleTextColor="#B0FFFFFF" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 1. Subject Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="#667EEA"
+                app:boxBackgroundColor="#331A1A3E"
+                app:startIconDrawable="@drawable/ic_book"
+                app:startIconTint="#667EEA">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Subject Name"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#B0FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 2. Subject Code -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="#667EEA"
+                app:boxBackgroundColor="#331A1A3E"
+                app:startIconDrawable="@drawable/ic_code"
+                app:startIconTint="#667EEA">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_subject_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Subject Code"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#B0FFFFFF"
+                    android:maxLength="10"
+                    android:inputType="textCapCharacters" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 3. ✅ FIXED Faculty Dropdown -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                app:boxStrokeColor="#4FACFE"
+                app:boxBackgroundColor="#331A1A3E"
+                app:startIconDrawable="@drawable/ic_faculty"
+                app:startIconTint="#4FACFE">
+
+                <AutoCompleteTextView
+                    android:id="@+id/et_faculty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Faculty Name"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#B0FFFFFF"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:dropDownAnchor="@id/et_faculty"
+                    android:dropDownWidth="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 4. Time Range (Horizontal) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="#4FACFE"
+                    app:boxBackgroundColor="#331A1A3E"
+                    app:startIconDrawable="@drawable/ic_time"
+                    app:startIconTint="#4FACFE">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_start_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Start Time"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="#B0FFFFFF"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:clickable="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="#4FACFE"
+                    app:boxBackgroundColor="#331A1A3E"
+                    app:startIconDrawable="@drawable/ic_time"
+                    app:startIconTint="#4FACFE">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_end_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="End Time"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="#B0FFFFFF"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:clickable="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- 5. Room -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="#667EEA"
+                app:boxBackgroundColor="#331A1A3E"
+                app:startIconDrawable="@drawable/ic_class"
+                app:startIconTint="#667EEA">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_room"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Room Number"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#B0FFFFFF" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 6. ✅ FIXED Semester Dropdown -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                app:boxStrokeColor="#6C63FF"
+                app:boxBackgroundColor="#331A1A3E"
+                app:startIconDrawable="@drawable/ic_semester"
+                app:startIconTint="#6C63FF">
+
+                <AutoCompleteTextView
+                    android:id="@+id/et_semester"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Semester"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#B0FFFFFF"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:dropDownAnchor="@id/et_semester"
+                    android:dropDownWidth="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_delete"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="12dp"
+            android:text="Delete"
+            android:textColor="#FFFF4444"
+            app:strokeColor="#FFFF4444"
+            app:strokeWidth="1.5dp"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_update"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:text="Update Class"
+            app:backgroundTint="#6C63FF"
+            app:icon="@drawable/ic_save"
+            app:iconTint="@android:color/white"
+            app:iconGravity="start" />
+
+    </LinearLayout>
+
+</LinearLayout>

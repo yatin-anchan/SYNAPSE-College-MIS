@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="7dp"
+    android:paddingHorizontal="4dp"
+    android:gravity="center_vertical">
+
+    <!-- Subject Code -->
+    <TextView
+        android:id="@+id/sub_code_result"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textColor="#77FFFFFF"
+        android:textSize="9sp"
+        android:maxLines="2"
+        android:ellipsize="end" />
+
+    <!-- Subject Name -->
+    <TextView
+        android:id="@+id/sub_name_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="#E8FFFFFF"
+        android:textSize="10sp"
+        android:maxLines="2"
+        android:ellipsize="end" />
+
+    <!-- Written -->
+    <TextView
+        android:id="@+id/sub_written_result"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:textColor="#BBFFFFFF"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:maxLines="1" />
+
+    <!-- Internal -->
+    <TextView
+        android:id="@+id/sub_internal_result"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:textColor="#BBFFFFFF"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:maxLines="1" />
+
+    <!-- Practical (- for theory-only subjects) -->
+    <TextView
+        android:id="@+id/sub_practical_result"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:textColor="#BBFFFFFF"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:maxLines="1" />
+
+    <!-- Total -->
+    <TextView
+        android:id="@+id/sub_total_result"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:maxLines="1" />
+
+    <!-- Percentage -->
+    <TextView
+        android:id="@+id/sub_percent_result"
+        android:layout_width="38dp"
+        android:layout_height="wrap_content"
+        android:textColor="#88FFFFFF"
+        android:textSize="9sp"
+        android:gravity="center"
+        android:maxLines="1" />
+
+    <!-- Grade (color set by adapter) -->
+    <TextView
+        android:id="@+id/sub_grade_result"
+        android:layout_width="26dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:maxLines="1" />
+
+</LinearLayout>

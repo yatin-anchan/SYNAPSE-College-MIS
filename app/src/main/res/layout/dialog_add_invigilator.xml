@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/card_glass_effect">
+
+    <!-- Teacher Selection -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select Teacher"
+        app:boxBackgroundColor="#22FFFFFF"
+        app:boxStrokeColor="@color/splash_accent"
+        app:hintTextColor="@color/splash_accent"
+        app:startIconDrawable="@drawable/ic_person"
+        app:startIconTint="@color/splash_accent"
+        android:layout_marginBottom="16dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/teacher_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Role Selection -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Role"
+        app:boxBackgroundColor="#22FFFFFF"
+        app:boxStrokeColor="@color/splash_accent"
+        app:hintTextColor="@color/splash_accent"
+        app:startIconDrawable="@drawable/ic_badge"
+        app:startIconTint="@color/splash_accent">
+
+        <AutoCompleteTextView
+            android:id="@+id/role_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

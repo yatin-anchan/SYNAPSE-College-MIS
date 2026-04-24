@@ -1,0 +1,5 @@
+<!-- Chip Selector State List -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:name="chip_selector">
+    <item android:color="#4FACFE" android:state_checked="true"/>
+    <item android:color="#331A1A3E"/>
+</selector>

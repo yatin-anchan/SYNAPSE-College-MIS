@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Outer glow ring -->
+    <path
+        android:strokeColor="#00D9FF"
+        android:strokeWidth="3"
+        android:fillAlpha="0"
+        android:strokeAlpha="0.3"
+        android:pathData="M100,10 A90,90 0 1,1 100,190 A90,90 0 1,1 100,10 Z" />
+
+    <!-- Main ring -->
+    <path
+        android:strokeColor="#6C63FF"
+        android:strokeWidth="2"
+        android:fillAlpha="0"
+        android:strokeAlpha="0.6"
+        android:pathData="M100,15 A85,85 0 1,1 100,185 A85,85 0 1,1 100,15 Z" />
+
+    <!-- Inner accent ring -->
+    <path
+        android:strokeColor="#00F5FF"
+        android:strokeWidth="1.5"
+        android:fillAlpha="0"
+        android:strokeAlpha="0.8"
+        android:pathData="M100,20 A80,80 0 1,1 100,180 A80,80 0 1,1 100,20 Z" />
+
+    <!-- Orbital dots -->
+    <path
+        android:fillColor="#00F5FF"
+        android:pathData="M100,15 A5,5 0 1,1 100,25 A5,5 0 1,1 100,15 Z" />
+
+    <path
+        android:fillColor="#6C63FF"
+        android:pathData="M180,100 A5,5 0 1,1 190,100 A5,5 0 1,1 180,100 Z" />
+
+    <path
+        android:fillColor="#00D9FF"
+        android:pathData="M100,175 A5,5 0 1,1 100,185 A5,5 0 1,1 100,175 Z" />
+
+    <path
+        android:fillColor="#8B7FFF"
+        android:pathData="M10,100 A5,5 0 1,1 20,100 A5,5 0 1,1 10,100 Z" />
+</vector>

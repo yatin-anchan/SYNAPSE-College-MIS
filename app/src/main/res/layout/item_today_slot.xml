@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_today_slot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#2A1A1A3E">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/card_glass_effect"
+        android:padding="14dp">
+
+        <!-- Left: time column -->
+        <LinearLayout
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:id="@+id/tv_today_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00 AM –\n10:00 AM"
+                android:textColor="#667EEA"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:lineSpacingExtra="2dp" />
+
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="56dp"
+            android:background="#33FFFFFF"
+            android:layout_marginEnd="14dp" />
+
+        <!-- Middle: content -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Class name + type badge -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:id="@+id/tv_today_class_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="FY BSc CS • Sem 1"
+                    android:textColor="@android:color/white"
+                    android:textSize="11sp"
+                    android:alpha="0.6"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/tv_today_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="THEORY"
+                    android:textColor="@android:color/white"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:background="@drawable/bg_chip_theory" />
+
+            </LinearLayout>
+
+            <!-- Subject -->
+            <TextView
+                android:id="@+id/tv_today_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data Structures (CS201)"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginBottom="2dp" />
+
+            <!-- Faculty -->
+            <TextView
+                android:id="@+id/tv_today_faculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="👤 Prof. Sharma"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:alpha="0.7"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginBottom="2dp" />
+
+            <!-- Room -->
+            <TextView
+                android:id="@+id/tv_today_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🚪 Room 201"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:alpha="0.65"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

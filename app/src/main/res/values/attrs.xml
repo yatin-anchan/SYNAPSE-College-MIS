@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SlideToConfirmView">
+        <!-- Text displayed on the slider -->
+        <attr name="slideText" format="string" />
+
+        <!-- Text displayed when completed -->
+        <attr name="slideCompletedText" format="string" />
+
+        <!-- Threshold to complete slide (0.0 to 1.0) -->
+        <attr name="slideThreshold" format="float" />
+
+        <!-- Background color of the slider -->
+        <attr name="slideBackgroundColor" format="color" />
+
+        <!-- Progress color -->
+        <attr name="slideProgressColor" format="color" />
+
+        <!-- Thumb/button color -->
+        <attr name="slideThumbColor" format="color" />
+
+        <!-- Text color -->
+        <attr name="slideTextColor" format="color" />
+
+        <!-- Completed state color -->
+        <attr name="slideCompletedColor" format="color" />
+
+        <!-- Text size -->
+        <attr name="slideTextSize" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <!-- Dashboard -->
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Dashboard" />
+
+        <!-- Department Management -->
+        <item
+            android:id="@+id/nav_faculty"
+            android:icon="@drawable/ic_faculty"
+            android:title="Faculty" />
+
+        <item
+            android:id="@+id/nav_students"
+            android:icon="@drawable/ic_students"
+            android:title="Students" />
+
+        <item
+            android:id="@+id/nav_timetable"
+            android:icon="@drawable/ic_calendar"
+            android:title="Timetable" />
+
+        <!-- Reports & Monitoring -->
+        <item
+            android:id="@+id/nav_attendance"
+            android:icon="@drawable/ic_exam"
+            android:title="Attendance Reports" />
+
+        <item android:id="@+id/nav_mark_attendance"
+            android:icon="@drawable/ic_attendance"
+            android:title="Mark Attendance"/>
+
+        <item
+            android:id="@+id/nav_marks_moderate_hod"
+            android:icon="@drawable/ic_person_check"
+            android:title="Exam Moderate" />
+
+        <item
+            android:id="@+id/nav_exams"
+            android:icon="@drawable/ic_exams"
+            android:title="Exam Results" />
+
+    </group>
+
+    <item android:title="Account">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_profile"
+                android:title="My Profile" />
+
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="Settings" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

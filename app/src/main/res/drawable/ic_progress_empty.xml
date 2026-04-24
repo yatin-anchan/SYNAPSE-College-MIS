@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Outer circle (stroked ring) -->
+    <path
+        android:pathData="M60,8 A52,52 0 1,1 59.9,8 Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:fillColor="#00000000"
+        android:strokeAlpha="0.2" />
+
+    <!-- Clipboard body -->
+    <path
+        android:pathData="M42,36 L42,86 Q42,90 46,90 L74,90 Q78,90 78,86 L78,36 Q78,32 74,32 L46,32 Q42,32 42,36 Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.85" />
+
+    <!-- Clipboard tab at top -->
+    <path
+        android:pathData="M53,28 Q53,24 57,24 L63,24 Q67,24 67,28 L67,36 L53,36 Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.55" />
+
+    <!-- Row 1 label bar -->
+    <path
+        android:pathData="M50,46 L70,46 L70,49 L50,49 Z"
+        android:fillColor="#1A1A3E"
+        android:fillAlpha="0.2" />
+
+    <!-- Row 1 progress track -->
+    <path
+        android:pathData="M50,53 L70,53 L70,57 L50,57 Z"
+        android:fillColor="#1A1A3E"
+        android:fillAlpha="0.12" />
+
+    <!-- Row 1 progress fill (~70%) -->
+    <path
+        android:pathData="M50,53 L64,53 L64,57 L50,57 Z"
+        android:fillColor="#1A1A3E"
+        android:fillAlpha="0.4" />
+
+    <!-- Row 2 label bar -->
+    <path
+        android:pathData="M50,63 L70,63 L70,66 L50,66 Z"
+        android:fillColor="#1A1A3E"
+        android:fillAlpha="0.2" />
+
+    <!-- Row 2 progress track -->
+    <path
+        android:pathData="M50,70 L70,70 L70,74 L50,74 Z"
+        android:fillColor="#1A1A3E"
+        android:fillAlpha="0.12" />
+
+    <!-- Row 2 progress fill (~40%) -->
+    <path
+        android:pathData="M50,70 L58,70 L58,74 L50,74 Z"
+        android:fillColor="#1A1A3E"
+        android:fillAlpha="0.4" />
+
+    <!-- Row 3 label bar (empty / pending) -->
+    <path
+        android:pathData="M50,80 L65,80 L65,83 L50,83 Z"
+        android:fillColor="#1A1A3E"
+        android:fillAlpha="0.15" />
+
+</vector>

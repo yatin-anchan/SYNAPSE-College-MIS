@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ================= BASE COLORS ================= -->
+
+    <color name="starglow">#FFE066</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- ================= PRIMARY THEME COLORS ================= -->
+
+    <!-- Primary brand color - Neural Purple Theme -->
+    <color name="splash_primary">#6C63FF</color>
+    <color name="splash_primary_dark">#5A55D8</color>
+    <color name="splash_primary_light">#8A83FF</color>
+
+    <!-- Accent colors - Neural Theme -->
+    <color name="splash_accent">#6C63FF</color>
+    <color name="splash_accent_dark">#5A55D8</color>
+    <color name="splash_accent_light">#8A83FF</color>
+    <color name="splash_accent_secondary">#6C63FF</color>
+
+    <!-- ================= BACKGROUND COLORS ================= -->
+
+    <!-- Main background - Dark Neural Theme -->
+    <color name="splash_background">#0A0A1E</color>
+    <color name="splash_background_dark">#050510</color>
+
+    <!-- Dashboard backgrounds -->
+    <color name="dashboard_background">#0F0F23</color>
+    <color name="dashboard_card_1">#667EEA</color>
+    <color name="dashboard_card_2">#6C63FF</color>
+    <color name="dashboard_card_3">#4FACFE</color>
+    <color name="dashboard_card_4">#5B7CFF</color>
+
+    <!-- Card backgrounds - Dark theme compatible -->
+    <color name="splash_card_background">#1A1A2E</color>
+    <color name="splash_card_bg">#1A1A2E</color>
+    <color name="splash_card_stroke">#2A2A3E</color>
+
+    <!-- Surface colors - Dark theme -->
+    <color name="splash_surface">#16162A</color>
+    <color name="splash_surface_variant">#1E1E32</color>
+
+    <!-- ================= TEXT COLORS ================= -->
+
+    <!-- Primary text - Light for dark theme -->
+    <color name="splash_text_color">#FFFFFF</color>
+    <color name="splash_text_primary">#FFFFFF</color>
+
+    <!-- Secondary text - Light grey for dark theme -->
+    <color name="splash_text_secondary">#B8B8D1</color>
+    <color name="splash_text_tertiary">#B0B0B0</color>
+    <color name="splash_text_hint">#808090</color>
+
+    <!-- Disabled text -->
+    <color name="splash_text_disabled">#60606F</color>
+
+    <!-- Text on primary color -->
+    <color name="splash_text_on_primary">#FFFFFF</color>
+
+    <!-- ================= STATUS COLORS ================= -->
+
+    <!-- Success -->
+    <color name="splash_success">#4CAF50</color>
+    <color name="splash_success_dark">#388E3C</color>
+    <color name="splash_success_light">#81C784</color>
+    <color name="status_success">#66BB6A</color>
+
+    <!-- Warning -->
+    <color name="splash_warning">#FF9800</color>
+    <color name="splash_warning_dark">#F57C00</color>
+    <color name="splash_warning_light">#FFB74D</color>
+
+    <!-- Error -->
+    <color name="splash_error">#F44336</color>
+    <color name="splash_error_dark">#D32F2F</color>
+    <color name="splash_error_light">#E57373</color>
+    <color name="status_error">#EF5350</color>
+
+    <!-- Info -->
+    <color name="splash_info">#2196F3</color>
+    <color name="splash_info_dark">#1976D2</color>
+    <color name="splash_info_light">#64B5F6</color>
+
+    <!-- Pending -->
+    <color name="status_pending">#FFA726</color>
+
+    <!-- ================= DIVIDERS & BORDERS ================= -->
+
+    <color name="splash_divider">#2A2A3E</color>
+    <color name="splash_border">#3A3A4E</color>
+    <color name="splash_border_light">#2A2A3E</color>
+
+    <!-- ================= BUTTON COLORS ================= -->
+
+    <!-- Primary button - Neural Purple -->
+    <color name="splash_button_primary">#6C63FF</color>
+    <color name="splash_button_primary_pressed">#5A55D8</color>
+
+    <!-- Secondary button - Neural Cyan -->
+    <color name="splash_button_secondary">#4FACFE</color>
+    <color name="splash_button_secondary_pressed">#3D9AE8</color>
+
+    <!-- Accent button - Neural Blue -->
+    <color name="splash_button_accent">#667EEA</color>
+    <color name="splash_button_accent_pressed">#5568D4</color>
+
+    <!-- ================= CHIP COLORS ================= -->
+
+    <!-- General chips -->
+    <color name="splash_chip_background">#1A1A2E</color>
+    <color name="splash_chip_text">#6C63FF</color>
+    <color name="splash_chip_stroke">#6C63FF</color>
+
+    <!-- Chip states -->
+    <color name="chip_selected">#6C63FF</color>
+    <color name="chip_unselected">#331A1A3E</color>
+
+    <!-- Status chips -->
+    <color name="chip_pending">#336C63FF</color>
+    <color name="chip_approved">#334FACFE</color>
+    <color name="chip_rejected">#FF6C63FF</color>
+    <color name="chip_pending_stroke">#FF6C63FF</color>
+    <color name="chip_approved_stroke">#FF4FACFE</color>
+    <color name="chip_rejected_stroke">#FFFF4444</color>
+
+    <!-- ================= SPECIAL COLORS ================= -->
+
+    <!-- Neural Theme - Professional Colors -->
+    <color name="neural_purple">#6C63FF</color>
+    <color name="neural_cyan">#4FACFE</color>
+    <color name="neural_blue">#667EEA</color>
+
+    <!-- Ripple effect - Lighter for dark theme -->
+    <color name="splash_ripple">#40FFFFFF</color>
+
+    <!-- Shadow - Darker for dark theme -->
+    <color name="splash_shadow">#80000000</color>
+
+    <!-- Overlay -->
+    <color name="splash_overlay">#CC000000</color>
+    <color name="splash_overlay_light">#80000000</color>
+
+    <!-- ================= ROLE-SPECIFIC COLORS ================= -->
+
+    <!-- COE - Neural Purple -->
+    <color name="splash_coe">#6C63FF</color>
+    <color name="splash_coe_light">#8A83FF</color>
+
+    <!-- HOD - Neural Blue -->
+    <color name="splash_hod">#667EEA</color>
+    <color name="splash_hod_light">#8A9BFF</color>
+
+    <!-- Faculty - Neural Cyan -->
+    <color name="splash_faculty">#4FACFE</color>
+    <color name="splash_faculty_light">#7DC4FF</color>
+
+    <!-- Student - Success Green -->
+    <color name="splash_student">#4CAF50</color>
+    <color name="splash_student_light">#81C784</color>
+
+    <!-- ================= STREAM COLORS ================= -->
+
+    <!-- Science -->
+    <color name="stream_science">#4CAF50</color>
+    <color name="stream_science_light">#81C784</color>
+
+    <!-- Commerce -->
+    <color name="stream_commerce">#FF9800</color>
+    <color name="stream_commerce_light">#FFB74D</color>
+
+    <!-- Arts -->
+    <color name="stream_arts">#9C27B0</color>
+    <color name="stream_arts_light">#BA68C8</color>
+
+    <!-- ================= ATTENDANCE COLORS ================= -->
+
+    <!-- Present -->
+    <color name="attendance_present">#4CAF50</color>
+
+    <!-- Absent -->
+    <color name="attendance_absent">#F44336</color>
+
+    <!-- Late -->
+    <color name="attendance_late">#FF9800</color>
+
+    <!-- On Leave -->
+    <color name="attendance_leave">#2196F3</color>
+
+    <!-- Attendance Percentage Colors -->
+    <color name="green_500">#4CAF50</color>
+    <color name="green_700">#388E3C</color>
+    <color name="orange_500">#FF9800</color>
+    <color name="orange_700">#F57C00</color>
+    <color name="red_500">#F44336</color>
+    <color name="red_700">#D32F2F</color>
+
+    <!-- ================= EXAM/GRADE COLORS ================= -->
+
+    <!-- Excellent (90-100) -->
+    <color name="grade_excellent">#4CAF50</color>
+
+    <!-- Good (75-89) -->
+    <color name="grade_good">#8BC34A</color>
+
+    <!-- Average (60-74) -->
+    <color name="grade_average">#FF9800</color>
+
+    <!-- Below Average (40-59) -->
+    <color name="grade_below_average">#FF5722</color>
+
+    <!-- Fail (0-39) -->
+    <color name="grade_fail">#F44336</color>
+
+    <!-- ================= TRANSPARENT COLORS ================= -->
+
+    <color name="transparent">#00000000</color>
+    <color name="white_transparent">#CCFFFFFF</color>
+    <color name="black_transparent">#80000000</color>
+
+    <!-- ================= STANDARD MATERIAL COLORS ================= -->
+
+    <color name="grey">#9E9E9E</color>
+    <color name="grey_light">#E0E0E0</color>
+    <color name="grey_dark">#616161</color>
+
+    <!-- Material Design Theme Colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#6C63FF</color>
+    <color name="purple_700">#5A55D8</color>
+    <color name="teal_200">#FF018786</color>
+    <color name="teal_700">#FF018786</color>
+
+
+    <!-- Attendance chips -->
+    <color name="chip_attendance_present">#4CAF50</color>
+    <color name="chip_attendance_absent">#F44336</color>
+    <color name="chip_attendance_late">#FF9800</color>
+
+
+    <!-- Chip Colors for Subject Types -->
+    <color name="chip_theory">#4FACFE</color>
+    <color name="chip_practical">#43E97B</color>
+    <color name="chip_elective">#FA709A</color>
+    <color name="chip_upcoming">#4FACFE</color>
+</resources>

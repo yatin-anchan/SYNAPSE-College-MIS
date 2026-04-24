@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Glassmorphism background matching your SynapseMIS theme -->
+    <solid android:color="#22FFFFFF" />
+
+    <!-- White stroke for border -->
+    <stroke
+        android:width="1.5dp"
+        android:color="#55FFFFFF" />
+
+    <!-- Rounded corners matching your 12dp card radius -->
+    <corners android:radius="12dp" />
+
+    <!-- Inner padding for better text spacing -->
+    <padding
+        android:left="12dp"
+        android:top="8dp"
+        android:right="12dp"
+        android:bottom="8dp" />
+
+</shape>
