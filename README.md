@@ -18,7 +18,7 @@ It enables seamless coordination between **Students, Faculty, HODs, and Examinat
 <p>
   <a href=""><img src="https://img.shields.io/badge/Docs-Documentation-orange?style=for-the-badge"/></a>
   &nbsp;&nbsp;&nbsp;
-  <a href=""><img src="https://img.shields.io/badge/Download-APK-blue?style=for-the-badge"/></a>
+  <a href="https://github.com/yatin-anchan/SYNAPSE-College-MIS/releases/tag/APP"><img src="https://img.shields.io/badge/Download-APK-blue?style=for-the-badge"/></a>
 </p>
 
 ---
@@ -147,12 +147,27 @@ Real-time Sync + Offline Cache
 ## 📱 Screenshots
 
 > *(Add real screenshots here for impact)*
+## 📱 Screenshots
 
-```md
-![Login](assets/login.png)
-![Dashboard](assets/dashboard.png)
-![Analytics](assets/analytics.png)
-```
+<p align="center">
+  <table>
+    <tr>
+      <td align="center" style="padding:10px;">
+        <img width="250" src="https://github.com/user-attachments/assets/6dc03009-b003-4cf6-9c17-785f59fa28a6"/><br/>
+        <b>Login Screen</b>
+      </td>
+      <td align="center" style="padding:10px;">
+        <img width="250" src="https://github.com/user-attachments/assets/971ead74-1d66-4590-af6e-26c3673515f6"/><br/>
+        <b>COE Dashboard</b>
+      </td>
+      <td align="center" style="padding:10px;">
+        <img width="250" src="https://github.com/user-attachments/assets/8994be57-bc7e-41de-ba36-7c836d183ba8"/><br/>
+        <b>Attendance Analytics</b>
+      </td>
+    </tr>
+  </table>
+</p>
+
 
 ---
 
