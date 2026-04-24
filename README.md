@@ -16,7 +16,7 @@
 
 It enables seamless coordination between **Students, Faculty, HODs, and Examination Authorities (COE)** through a unified Android application.
 <p>
-  <a href=""><img src="https://img.shields.io/badge/Docs-Documentation-orange?style=for-the-badge"/></a>
+  <a href="https://github.com/yatin-anchan/SYNAPSE-College-MIS/blob/main/Final_SYNAPSE_BLACKBOOK_2026.pdf"><img src="https://img.shields.io/badge/Docs-Documentation-orange?style=for-the-badge"/></a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://github.com/yatin-anchan/SYNAPSE-College-MIS/releases/tag/APP"><img src="https://img.shields.io/badge/Download-APK-blue?style=for-the-badge"/></a>
 </p>
